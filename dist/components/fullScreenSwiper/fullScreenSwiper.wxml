@@ -1,0 +1,9 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <view class="imgs">
+            <image class="img-li" src="{{el.$original.src}}" wx:key="id" mode="scaleToFill" bindtouchstart="anonymousFunc0" style="{{el.$loopState__temp2}}" wx:for="{{loopArray1040}}" wx:for-item="el" wx:for-index="index" data-e-touchstart-so="this" data-e-touchstart-a-a="{{el._$indexKey}}"></image>
+        </view>
+        <view class="btn-group"> <text bindtap="anonymousFunc1" wx:key="id" class="{{'mini-btn ' + (ind == index ? 'long-btn' : '')}}" wx:for="{{loopArray1041}}" wx:for-item="el" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{el._$indexKey2}}"></text> 
+        </view>
+    </view>
+</block>

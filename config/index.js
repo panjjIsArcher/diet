@@ -1,3 +1,5 @@
+const path = require ("path");
+
 const config = {
   projectName: 'diet',
   date: '2020-7-9',
@@ -74,7 +76,14 @@ const config = {
         }
       }
     }
-  }
+  },
+  alias:{
+    '@/components':path.resolve(__dirname, '..', 'src/components'),
+    '@/assets':path.resolve(__dirname, '..', 'src/assets'),
+    '@/pages':path.resolve(__dirname, '..', 'src/pages'),
+  },
+  "webpackChain": {},
+  "devServer": {}
 }
 
 module.exports = function (merge) {

@@ -1,0 +1,97 @@
+.index{
+  .bg{
+    background-color: #02A7F0;
+    height: 70vh;
+    .circle-box{
+       height: 30vh;
+       padding: 20vh 0;
+       display: flex;
+       justify-content: center;
+    }
+    .circle-opa{
+      animation-name:circle-opacity ;
+      animation-timing-function: ease;
+      animation-duration:3s;
+      animation-iteration-count: infinite;
+    }
+    .circle-opa-second{
+      animation-name:circle-opacity-second ;
+      animation-timing-function: ease;
+      animation-duration:3s;
+      animation-iteration-count: infinite;
+    }
+    .circle-first{
+      z-index: 50;
+      position: absolute;
+    }
+    .circle-second{
+      z-index: 20;
+      position: absolute;
+    }
+    .circle-third{
+      z-index: 10;
+      position: absolute;
+    }
+    .circle {
+      width: 30vh;
+      height: 30vh;
+      background-color: #fff;
+      border-radius: 50%;
+      align-self: center;
+    }
+    .wave{
+      height: 20%;
+      position: relative;
+      display: flex;
+      bottom: 3vh;
+      justify-content: flex-end;
+      .single-wave{
+        background-color: #fff;
+        width: 23vh;   
+        height: 23vh;
+        border-radius:45%;
+        position: relative;
+        right: 0;
+        
+      }
+      .wave-move{
+        animation-name: wavemove;
+        animation-timing-function: ease;
+        animation-duration:5s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}
+//波浪效果
+@keyframes wavemove{
+  0% {
+    left: 0 ;
+    transform: rotateZ(0);
+  }
+  100% {
+    left:-100vh;
+    transform: rotateZ(360deg);
+  }
+}
+// 扩散效果
+@keyframes circle-opacity{
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0.4;
+      transform: scale(1.2);
+  }
+}
+@keyframes circle-opacity-second{
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0.2;
+      transform: scale(1.4);
+  }
+}

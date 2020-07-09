@@ -24,8 +24,6 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/_
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
-__webpack_require__(/*! ./app.less */ "./src/app.less");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39,7 +37,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
 //   require('nerv-devtools')
 // }
-
 var _App = function (_BaseComponent) {
   _inherits(_App, _BaseComponent);
 
@@ -55,12 +52,14 @@ var _App = function (_BaseComponent) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      pages: ['pages/index/index'],
+      pages: ['pages/index/index' //第一项默认是首页
+      ],
       window: {
         backgroundTextStyle: 'light',
-        navigationBarBackgroundColor: '#fff',
-        navigationBarTitleText: 'WeChat',
-        navigationBarTextStyle: 'black'
+        navigationBarTitleText: 'diet', //导航标题
+        navigationBarTextStyle: 'white', //导航字体颜色
+        navigationBarBackgroundColor: "#000", //导航背景色
+        enablePullDownRefresh: true //是否开启下拉页面刷新
 
         // 在 App 类中的 render() 函数没有实际作用
         // 请勿修改此函数
@@ -68,18 +67,6 @@ var _App = function (_BaseComponent) {
   }
 
   _createClass(_App, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
-  }, {
-    key: 'componentDidShow',
-    value: function componentDidShow() {}
-  }, {
-    key: 'componentDidHide',
-    value: function componentDidHide() {}
-  }, {
-    key: 'componentDidCatchError',
-    value: function componentDidCatchError() {}
-  }, {
     key: '_createData',
     value: function _createData() {}
   }]);
@@ -130,17 +117,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "./src/app.less":
-/*!**********************!*\
-  !*** ./src/app.less ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ })
 

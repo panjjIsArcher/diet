@@ -8,13 +8,14 @@ import Index from './pages/index'
 class App extends Component {
   config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index' //第一项默认是首页
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      navigationBarTitleText: 'diet',//导航标题
+      navigationBarTextStyle: 'white',//导航字体颜色
+      navigationBarBackgroundColor:"#000" ,//导航背景色
+      enablePullDownRefresh:true //是否开启下拉页面刷新
     }
   }
   // 在 App 类中的 render() 函数没有实际作用

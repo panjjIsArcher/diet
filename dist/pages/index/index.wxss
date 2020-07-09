@@ -1,0 +1,146 @@
+.index .bg {
+  background-color: #02A7F0;
+  height: 70vh;
+}
+.index .bg .circle-box {
+  height: 30vh;
+  padding: 20vh 0;
+  display: flex;
+  justify-content: center;
+}
+.index .bg .circle-opa {
+  -webkit-animation-name: circle-opacity;
+          animation-name: circle-opacity;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.index .bg .circle-opa-second {
+  -webkit-animation-name: circle-opacity-second;
+          animation-name: circle-opacity-second;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.index .bg .circle-first {
+  z-index: 50;
+  position: absolute;
+}
+.index .bg .circle-second {
+  z-index: 20;
+  position: absolute;
+}
+.index .bg .circle-third {
+  z-index: 10;
+  position: absolute;
+}
+.index .bg .circle {
+  width: 30vh;
+  height: 30vh;
+  background-color: #fff;
+  border-radius: 50%;
+  align-self: center;
+}
+.index .bg .wave {
+  height: 20%;
+  position: relative;
+  display: flex;
+  bottom: 3vh;
+  justify-content: flex-end;
+}
+.index .bg .wave .single-wave {
+  background-color: #fff;
+  width: 23vh;
+  height: 23vh;
+  border-radius: 45%;
+  position: relative;
+  right: 0;
+}
+.index .bg .wave .wave-move {
+  -webkit-animation-name: wavemove;
+          animation-name: wavemove;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes wavemove {
+  0% {
+    left: 0 ;
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    left: -100vh;
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@keyframes wavemove {
+  0% {
+    left: 0 ;
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    left: -100vh;
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes circle-opacity {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0.4;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes circle-opacity {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0.4;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes circle-opacity-second {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0.2;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+}
+@keyframes circle-opacity-second {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0.2;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+}
