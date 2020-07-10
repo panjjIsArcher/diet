@@ -7,8 +7,10 @@ import Index from './pages/index'
 // }
 class App extends Component {
   config = {
-    pages: [
-      'pages/index/index' //第一项默认是首页
+    pages: [ 
+      'pages/home/home',
+      'pages/index/index',//第一项默认是首页
+     
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -16,6 +18,17 @@ class App extends Component {
       navigationBarTextStyle: 'white',//导航字体颜色
       navigationBarBackgroundColor:"#000" ,//导航背景色
       enablePullDownRefresh:true //是否开启下拉页面刷新
+    },
+    tabBar:{
+      borderStyle:'white',
+      position:'bottom',
+      color:"#000",
+      selectedColor:"#02A7F0",
+      backgroundColor:"#fff",
+      list:[
+        { text:'首页', pagePath: 'pages/index/index' },
+        { text:'家', pagePath: 'pages/index/index' },
+      ]
     }
   }
   // 在 App 类中的 render() 函数没有实际作用

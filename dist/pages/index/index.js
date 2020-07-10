@@ -24,6 +24,8 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/_
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
+var _config = __webpack_require__(/*! ./config */ "./src/pages/index/config.js");
+
 __webpack_require__(/*! ./index.less */ "./src/pages/index/index.less");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -33,6 +35,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+console.log(_config.config);
 
 var Index = (_temp2 = _class = function (_BaseComponent) {
   _inherits(Index, _BaseComponent);
@@ -87,6 +91,33 @@ Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/_@tarojs
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "pages/index/index.wxml";
+
+/***/ }),
+
+/***/ "./src/pages/index/config.js":
+/*!***********************************!*\
+  !*** ./src/pages/index/config.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var config = {
+  tabBar: {
+    borderStyle: 'white',
+    position: 'bottom',
+    color: "#000",
+    selectedColor: "#02A7F0",
+    backgroundColor: "#fff",
+    list: [{ text: '首页', pagePath: 'pages/index/index' }, { text: '家', pagePath: 'pages/index/index' }]
+  }
+};
+exports.config = config;
 
 /***/ }),
 

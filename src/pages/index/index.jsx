@@ -4,6 +4,7 @@ import { config } from "./config.js";
 import FullScreenSwiper from "../../components/fullScreenSwiper/fullScreenSwiper";
 import "./index.less";
 
+console.log(config)
 export default class Index extends Component {
   config
   constructor(props){
@@ -23,10 +24,8 @@ export default class Index extends Component {
             <View className='circle circle-opa-second circle-third'></View>
           </View>
           <View className='wave'>
-            <View className='single-wave wave-move' ></View>
-            
+            <View className='single-wave wave-move'></View>
           </View>
-          
         </View>
       </View>
     )
