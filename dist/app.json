@@ -1,1 +1,15 @@
-{"pages":["pages/home/home","pages/index/index"],"window":{"backgroundTextStyle":"light","navigationBarTitleText":"diet","navigationBarTextStyle":"white","navigationBarBackgroundColor":"#000","enablePullDownRefresh":true},"tabBar":{"borderStyle":"white","position":"bottom","color":"#000","selectedColor":"#02A7F0","backgroundColor":"#fff","list":[{"text":"首页","pagePath":"pages/index/index"},{"text":"家","pagePath":"pages/index/index"}]}}
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/start/start"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "diet",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#000",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap55.json"
+}

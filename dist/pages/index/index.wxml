@@ -1,14 +1,14 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="index">
-        <view class="bg">
+        <view class="{{anonymousState__temp}}">
             <view class="circle-box">
                 <view class="circle circle-first"></view>
                 <view class="circle circle-opa circle-second"></view>
                 <view class="circle circle-opa-second circle-third"></view>
             </view>
-            <view class="wave">
-                <view class="single-wave wave-move"></view>
-            </view>
+        </view>
+        <view class="btn-group">
+            <btn wx:key="key" wx:for="{{loopArray345}}" wx:for-item="el" wx:for-index="_anonIdx2" compid="{{el.$compid__345}}">{{el.$original.title}}</btn>
         </view>
     </view>
 </block>

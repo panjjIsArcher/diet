@@ -1,0 +1,9 @@
+.bg-color-blue {
+  background-color: #02A7F0;
+}
+.bg-color-green {
+  background-color: lightgreen;
+}
+.bg-color-orange {
+  background-color: orange;
+}

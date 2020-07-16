@@ -14,6 +14,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
@@ -24,9 +26,9 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/_
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
-var _config = __webpack_require__(/*! ./config */ "./src/pages/index/config.js");
-
 __webpack_require__(/*! ./index.less */ "./src/pages/index/index.less");
+
+var _themeColorChoose = __webpack_require__(/*! ../../assets/js/themeColorChoose */ "./src/assets/js/themeColorChoose.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,8 +37,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-console.log(_config.config);
 
 var Index = (_temp2 = _class = function (_BaseComponent) {
   _inherits(Index, _BaseComponent);
@@ -52,14 +52,17 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray345", "arr", "status"], _this.customComponents = ["Btn"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
     key: "_constructor",
     value: function _constructor(props) {
       _get(Index.prototype.__proto__ || Object.getPrototypeOf(Index.prototype), "_constructor", this).call(this, props);
-      var state = {};
+      this.state = {
+        status: 2,
+        arr: [{ title: '每日体重' }, { title: '热量查询' }, { title: "每月热量" }, { title: '我的' }]
+      };
       this.$$refs = new _taroWeapp2.default.RefsArray();
     }
   }, {
@@ -70,7 +73,32 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      Object.assign(this.__state, {});
+
+      var _state = this.__state,
+          arr = _state.arr,
+          status = _state.status;
+
+      var anonymousState__temp = "bg " + (0, _themeColorChoose.themeColor)(status);
+      var loopArray345 = arr.map(function (el, _anonIdx) {
+        el = {
+          $original: (0, _taroWeapp.internal_get_original)(el)
+        };
+
+        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "defzzzzzzz" + _anonIdx, true),
+            _genCompid2 = _slicedToArray(_genCompid, 2),
+            $prevCompid__345 = _genCompid2[0],
+            $compid__345 = _genCompid2[1];
+
+        _taroWeapp.propsManager.set({}, $compid__345, $prevCompid__345);
+        return {
+          $compid__345: $compid__345,
+          $original: el.$original
+        };
+      });
+      Object.assign(this.__state, {
+        anonymousState__temp: anonymousState__temp,
+        loopArray345: loopArray345
+      });
       return this.__state;
     }
   }]);
@@ -94,10 +122,10 @@ module.exports = __webpack_require__.p + "pages/index/index.wxml";
 
 /***/ }),
 
-/***/ "./src/pages/index/config.js":
-/*!***********************************!*\
-  !*** ./src/pages/index/config.js ***!
-  \***********************************/
+/***/ "./src/assets/js/themeColorChoose.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/themeColorChoose.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -107,17 +135,16 @@ module.exports = __webpack_require__.p + "pages/index/index.wxml";
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var config = {
-  tabBar: {
-    borderStyle: 'white',
-    position: 'bottom',
-    color: "#000",
-    selectedColor: "#02A7F0",
-    backgroundColor: "#fff",
-    list: [{ text: '首页', pagePath: 'pages/index/index' }, { text: '家', pagePath: 'pages/index/index' }]
+var themeColor = function themeColor(status) {
+  if (status == 1) {
+    return 'bg-color-blue';
+  } else if (status == 2) {
+    return 'bg-color-orange';
+  } else {
+    return 'bg-color-green';
   }
 };
-exports.config = config;
+exports.themeColor = themeColor;
 
 /***/ }),
 

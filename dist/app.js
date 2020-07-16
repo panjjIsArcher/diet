@@ -24,6 +24,8 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/_
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
+__webpack_require__(/*! ./assets/css/theme.less */ "./src/assets/css/theme.less");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32,11 +34,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+//全局主题样式
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
-// if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
-//   require('nerv-devtools')
-// }
+
+// console.log(less)
 var _App = function (_BaseComponent) {
   _inherits(_App, _BaseComponent);
 
@@ -52,28 +54,35 @@ var _App = function (_BaseComponent) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      pages: ['pages/home/home', 'pages/index/index'],
+      pages: ['pages/index/index', 'pages/home/home', 'pages/start/start'
+      //第一项默认是首页
+      ],
       window: {
         backgroundTextStyle: 'light',
         navigationBarTitleText: 'diet', //导航标题
         navigationBarTextStyle: 'white', //导航字体颜色
         navigationBarBackgroundColor: "#000", //导航背景色
         enablePullDownRefresh: true //是否开启下拉页面刷新
-      },
-      tabBar: {
-        borderStyle: 'white',
-        position: 'bottom',
-        color: "#000",
-        selectedColor: "#02A7F0",
-        backgroundColor: "#fff",
-        list: [{ text: '首页', pagePath: 'pages/index/index' }, { text: '家', pagePath: 'pages/index/index' }]
+
+        // tabBar:{
+        //   borderStyle:'white',
+        //   position:'bottom',
+        //   color:"#000",
+        //   selectedColor:"#02A7F0",
+        //   backgroundColor:"#fff",
+        //   list:[
+        //     { text:'首页', pagePath: 'pages/index/index' },
+        //     { text:'家', pagePath: 'pages/index/index' },
+        //   ]
+        // }
+
         // 在 App 类中的 render() 函数没有实际作用
         // 请勿修改此函数
       } }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(_App, [{
-    key: '_createData',
+    key: "_createData",
     value: function _createData() {}
   }]);
 
@@ -123,6 +132,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_tarojs_mini_runner_2_1_5_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_app_jsx_taro_type_script_parse_ENTRY___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/assets/css/theme.less":
+/*!***********************************!*\
+  !*** ./src/assets/css/theme.less ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ })
 

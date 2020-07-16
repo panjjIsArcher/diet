@@ -1,16 +1,19 @@
 import Taro, { Component } from '@tarojs/taro'
-import Index from './pages/index'
+import Index from './pages/index';
+import "./assets/css/theme.less"; //全局主题样式
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
-// if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
-//   require('nerv-devtools')
-// }
+if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
+  require('nerv-devtools')
+}
+// console.log(less)
 class App extends Component {
   config = {
     pages: [ 
+      'pages/index/index',
       'pages/home/home',
-      'pages/index/index',//第一项默认是首页
-     
+      'pages/start/start'
+     //第一项默认是首页
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -19,17 +22,17 @@ class App extends Component {
       navigationBarBackgroundColor:"#000" ,//导航背景色
       enablePullDownRefresh:true //是否开启下拉页面刷新
     },
-    tabBar:{
-      borderStyle:'white',
-      position:'bottom',
-      color:"#000",
-      selectedColor:"#02A7F0",
-      backgroundColor:"#fff",
-      list:[
-        { text:'首页', pagePath: 'pages/index/index' },
-        { text:'家', pagePath: 'pages/index/index' },
-      ]
-    }
+    // tabBar:{
+    //   borderStyle:'white',
+    //   position:'bottom',
+    //   color:"#000",
+    //   selectedColor:"#02A7F0",
+    //   backgroundColor:"#fff",
+    //   list:[
+    //     { text:'首页', pagePath: 'pages/index/index' },
+    //     { text:'家', pagePath: 'pages/index/index' },
+    //   ]
+    // }
   }
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
